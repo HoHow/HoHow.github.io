@@ -64,6 +64,47 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-export-blog" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/04/export-blog/" class="article-date">
+  <time datetime="2020-01-04T15:44:30.000Z" itemprop="datePublished">2020-01-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/04/export-blog/">module.exports,exports用法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="module-exports-exports用法"><a href="#module-exports-exports用法" class="headerlink" title="module.exports,exports用法"></a>module.exports,exports用法</h1><p>在Node.js中在引入檔案時，需要使用require來引入檔案，在另一個檔案中要使用</p>
+<p>每個檔案都是一個模組，別的檔案無法看見另一個檔案的內容，需要使用exports或是module.exports來匯出檔案<br>exports = module.exports = {} 都是指向同一個地方</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//test.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;<span class="attr">hello</span>:<span class="string">'my friend'</span>&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//main.js</span></span><br><span class="line"><span class="keyword">var</span> test = <span class="built_in">require</span>(<span class="string">'./test.js'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(test)</span><br><span class="line"><span class="comment">//log &#123;hello:'my friend'&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(test.hello)</span><br><span class="line"><span class="comment">//log 'my friend'</span></span><br></pre></td></tr></table></figure>
+<p>exports是輔助module.exports來操作內存中的數據</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/01/04/export-blog/" data-id="ck4zre4wr0000agt92rxlcpre" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-aa-blog" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/01/02/aa-blog/" class="article-date">
@@ -214,6 +255,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/01/04/export-blog/">module.exports,exports用法</a>
+          </li>
         
           <li>
             <a href="/2020/01/02/aa-blog/">aa_blog</a>
